@@ -1,3 +1,6 @@
-// This file is intentionally left blank for now.
-// It's a placeholder for utility functions often generated or used by shadcn/ui.
-export {};
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
