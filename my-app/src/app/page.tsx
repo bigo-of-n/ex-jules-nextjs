@@ -44,6 +44,23 @@ export default function Home() {
             Check the README.md for more information.
           </p>
         </div>
+
+        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+          <a
+            href="/app-components"
+            className="block" // Make the anchor fill the div for a larger clickable area
+          >
+            <h2 className={`mb-3 text-2xl font-semibold`}>
+              App Components{' '}
+              <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                -&gt;
+              </span>
+            </h2>
+            <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+              View implemented shadcn/ui components and examples.
+            </p>
+          </a>
+        </div>
       </div>
     </main>
   )
