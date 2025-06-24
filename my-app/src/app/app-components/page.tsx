@@ -5,7 +5,17 @@ import { AlertInfo } from "@/components/ui/alert-info"; // Import new info alert
 // and can be imported from there. For this subtask, assume they are distinct or re-exported as shown.
 import { Button } from "@/components/ui/button";
 import { SignInForm } from "@/components/ui/sign-in-form";
-import { Terminal, Waves, Rocket, PartyPopper, AlertTriangle, Info, Mail } from "lucide-react";
+import {
+  Terminal,
+  Waves,
+  Rocket,
+  PartyPopper,
+  AlertTriangle,
+  Info,
+  Mail,
+} from "lucide-react";
+import { ExampleChart } from "@/components/example-charts";
+import { Card } from "@/components/ui/card";
 
 export default function AppComponentsPage() {
   return (
@@ -30,14 +40,18 @@ export default function AppComponentsPage() {
               Your session has expired. Please log in again.
             </AlertDescription>
           </Alert>
-          <AlertSuccess> {/* Changed from Alert variant="success" */}
-             <PartyPopper className="h-4 w-4" />
+          <AlertSuccess>
+            {" "}
+            {/* Changed from Alert variant="success" */}
+            <PartyPopper className="h-4 w-4" />
             <AlertTitle>Success!</AlertTitle>
             <AlertDescription>
               Your profile has been updated successfully.
             </AlertDescription>
           </AlertSuccess>
-           <AlertInfo> {/* Changed from Alert variant="info" */}
+          <AlertInfo>
+            {" "}
+            {/* Changed from Alert variant="info" */}
             <Info className="h-4 w-4" />
             <AlertTitle>Information</AlertTitle>
             <AlertDescription>
@@ -64,7 +78,7 @@ export default function AppComponentsPage() {
           <Button variant="success">
             <PartyPopper className="mr-2 h-4 w-4" /> Confirm
           </Button>
-           <Button variant="info">
+          <Button variant="info">
             <Info className="mr-2 h-4 w-4" /> Learn More
           </Button>
           <Button size="sm">Small Button</Button>
@@ -81,6 +95,13 @@ export default function AppComponentsPage() {
         <div className="flex justify-center">
           <SignInForm />
         </div>
+      </section>
+
+      <section>
+        <h2>Charts</h2>
+        <Card className="w-1/2">
+          <ExampleChart />
+        </Card>
       </section>
     </div>
   );
